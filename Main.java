@@ -31,7 +31,7 @@ public class Main {
             for (int j = i + 1; j < arrayBalok.size(); j++) {
                 double keliling1 = arrayBalok.get(i).hitungLuasPermukaan();
                 double keliling2 = arrayBalok.get(j).hitungLuasPermukaan();
-                if (keliling1 <keliling2) {
+                if (keliling1 > keliling2) {
                     Balok temp = arrayBalok.get(i);
                     arrayBalok.set(i, arrayBalok.get(j));
                     arrayBalok.set(j, temp);

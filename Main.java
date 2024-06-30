@@ -27,16 +27,20 @@ public class Main {
 
     }
     public static void sort(List<Balok> arrayBalok){
-        for (int i = 0; i < arrayBalok.size() - 1; i++) {
-            for (int j = i + 1; j < arrayBalok.size(); j++) {
+        int i = 0;
+        while (i < arrayBalok.size() - 1) {
+        int j = i + 1;
+            while (j < arrayBalok.size()) {
                 double lp1 = arrayBalok.get(i).hitungLuasPermukaan();
                 double lp2 = arrayBalok.get(j).hitungLuasPermukaan();
                 if (lp1 > lp2) {
-                    Balok temp = arrayBalok.get(i);
+                    Balok cubo = arrayBalok.get(i);
                     arrayBalok.set(i, arrayBalok.get(j));
-                    arrayBalok.set(j, temp);
+                    arrayBalok.set(j, cubo);
                 }
+                j++;
             }
+            i++;
         }
         String namaFileLuasPermukaan = "src/SortedSurfaceArea.txt";
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(namaFileLuasPermukaan))) {

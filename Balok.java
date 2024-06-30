@@ -1,7 +1,7 @@
 public class Balok {
-    private double panjang;
-    private double lebar;
-    private double tinggi;
+    public double panjang;
+    public double lebar;
+    public double tinggi;
 
     Balok(String panjang, String lebar, String tinggi) {
         this.panjang = Double.parseDouble(panjang);

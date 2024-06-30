@@ -29,9 +29,9 @@ public class Main {
     public static void sort(List<Balok> arrayBalok){
         for (int i = 0; i < arrayBalok.size() - 1; i++) {
             for (int j = i + 1; j < arrayBalok.size(); j++) {
-                double keliling1 = arrayBalok.get(i).hitungLuasPermukaan();
-                double keliling2 = arrayBalok.get(j).hitungLuasPermukaan();
-                if (keliling1 > keliling2) {
+                double lp1 = arrayBalok.get(i).hitungLuasPermukaan();
+                double lp2 = arrayBalok.get(j).hitungLuasPermukaan();
+                if (lp1 > lp2) {
                     Balok temp = arrayBalok.get(i);
                     arrayBalok.set(i, arrayBalok.get(j));
                     arrayBalok.set(j, temp);
